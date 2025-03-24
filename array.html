@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const flowers = ["rose", "dandelion", "orchid"];
+        console.log(flowers);
+
+        flowers.push("poppy", "lilly");
+        console.log(flowers);
+    </script>
+    <script data-label="Looping over array elements">
+        const fruits = ["apple", "grape", "peach", "banana", "lemon"]; -->
+
+        <!-- // for (let i = 0; i < fruits.length; i++) {
+        //     console.log( fruits[i] );
+        // } -->
+
+    </script>
+    
+    <script>
+       const EXP_PER_LEVEL = 100;
+       const player = {
+            name: "PlayerOne",
+            health: 100,
+            level: 1,
+            experience: 0,
+            inventory: [
+                { name: "Wooden Shield", defense: 3 },
+                { name: "Wooden Sword", attack: 3 },
+
+            ],
+            fight() {
+                const monsterPower = 5;
+                const monsterExperienceReward = 20;
+                const playerDefense = this.getPlayerDefense();
+                const damageDealtToPlayer = playerDefense >= monsterPower 
+                ? 0
+                : (monsterPower - playerDefense);
+                console.log({ damageDealtToPlayer });
+
+                // this.player.health = this.player.health - damageDealtToPlayer;
+                this.player.healt -= damageDealtToPlayer;
+            
+                if (this.healt > 0) {
+                    this.experience += MONSTER_EXPERIENCE_REWARD;
+                    if (this.experience >= 100) {
+                        if (this.experience >= 100) {
+                            const newLevels = Math.floor(this.experience / EXP_PER_LEVEL)
+                            const remainingExperience = this.experience % EXP_PER_LEVEL;
+                        this.level += newLevels;
+                        
+                        this.experience = remainingExperience;
+                    }
+                }
+            },
+
+            getPlayerDefense() {
+                let playerDefense = 0;
+                for (const item of this.inventory) {
+                //     if(item.defense) {
+                //     playerDefense += item.defense;
+                // }
+                // 
+                // playerDefense += item.defense ?? 0; 
+               
+                playerDefense += item.defense ? item.defense : 0;
+               
+            }
+            return playerDefense;
+        };
+    };
+
+        const def = player.getPlayerDefense();
+        for (let i = 0; i < 10; i++) {
+            player.fight();
+        }
+    </script>
+</body>
+</html>

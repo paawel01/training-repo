@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        // Task
+        // Time parsing function from miliseconds to minutes and seconds
+        
+        // modulo, temple literal `${}`, pad
+        function formatTime(miliseconds) {
+          // TODO document why this function 'formatTime' is empty
+        const totalSeconds = Math.floor(miliseconds / 1000);
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        return `${minutes}:${seconds.toString().padStart(2, '0')};`
+
+        }
+
+        console.log(formatTime(121000)); // 2:01 (mm:ss)
+     </script>
+
+     <script>
+      function getFullName(firstName, lastName) {
+        const fullName = firstName + " " + lastName;
+        return fullName;
+      }
+      console.log(getFullName("John", "Doe"));
+    </script>
+    <script>
+        function calculateTotal(price, taxRate) {
+            const finalPrice = price + (price * taxRate);
+            return finalPrice;
+        }
+        console.log(calculateTotal(100, 0.07));
+    </script>
+    <script>
+        function getInitials(firstName, lastName) {
+            const firsInitial = firstName[0].toUpperCase();
+            const lastInitial = lastName[0].toUpperCase();
+            return firsInitial + "." + lastInitial + ".";
+            
+        }
+        const name = "Ada Lovelace";
+        const [firstName, lastName] = name.split(" ");
+        console.log(getInitials(firstName, lastName));
+    </script>
+    <script>
+        function convertTime(minutes) {
+            const hours = Math.floor(minutes / 60);
+            const remainingMinutes = minutes % 60;
+          return `${hours}:${remainingMinutes.toString().padStart(2, '0')}`;
+        }
+        console.log(convertTime(90));
+    </script>
+
+    <script>
+
+        function isLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                return true;
+
+            } else {
+                return false;
+            }
+           
+
+        }
+        console.log(isLeapYear(2024)); // true
+        console.log(isLeapYear(1900)); // false
+        console.log(isLeapYear(2000)); // true
+
+
+
+    </script>
+
+    <script>
+
+        function getDiscountPrice(price, discountPercent) {
+            const discountAmount = price * discountPercent / 100;
+            const newPrice = price - discountAmount;
+            return newPrice;
+        }
+
+        console.log(getDiscountPrice(200, 20));
+      
+    </script>
+    <script>
+        function getDiscountPrice(price, quantity, discountPercent) {
+        
+
+        if (quantity >= 10) {
+            discount = 50;
+       
+        } else {
+          discount = 20;
+        }
+
+        const totalPrice = price * quantity;
+        const discountAmount = totalPrice * (discount /100);
+        const finalPrice = totalPrice - discountAmount;
+
+        return `Your price after ${discount}% discount: $${finalPrice.toFixed(2)}`;
+    }
+
+        console.log(getDiscountPrice(100, 10, 50));
+        console.log(getDiscountPrice(50, 5, 20));
+       
+    </script>
+    
+
+    <script>
+        function canEnter(age) {
+            if (age >= 18) {
+            return `You can enter !!!`
+        } else {
+            return `You are too young :c`;
+        }
+    }
+    console.log(canEnter(17));
+    console.log(canEnter(21));
+
+    </script>
+
+    <script>
+        // if (password === "admin123") {
+        //     console.log("You are logged in!");
+        // }
+
+        // // or 
+
+        // const isPasswordCorrect = (password === "admin123");
+
+        // if (isPasswordCorrect) {
+        //     console.log("You are logged in!")
+        // }
+
+        // // or 
+
+        // const CORRECT_PASSWORD = "admin123";
+
+        // const isPasswordCorrect = (password === CORRECT_PASSWORD);
+
+        // if (isPasswordCorrect) {
+        //     console.log("You are logged in!");
+        // }
+            </script>
+
+            <script>
+
+              
+                    // !true === false  // true
+                    // !false !== !true // true
+
+                    if (!isPremium) {
+                        console.log("You can skip unlimited amount of songs!");
+                    } else {
+                        console.log("You can skip only 5 songs per hour");
+                        console.log("Buy premium for unlimited access!");
+                    }
+            </script>
+            <script>
+
+                // function buyBeer(age) {
+                //     if (age >= 18) {
+                //         return "Beer";
+                //         else {
+                //             return "No beer";
+                //         }
+                //     }
+                // }
+
+                // or 
+                
+                // function buyBeer(age) {
+                //     if (age >= 18) return "Beer";
+                //     return "No beer";
+                // }
+
+                // rozwinięcie funkcji 
+
+                // function buyBeer(age) {
+                //     if (age >= 21 && isAmerican) return "Beer";
+                //     if (age >= 18 && isAmerican) return "No beer";
+                //     if (age >= 18 && !isAmerican) return "Beer";
+                //     return "No beer";
+                // }
+
+                // or
+
+                // function buyBeer(age, isAmerican) {
+                //     if (sAmerican) {
+                //         if (age >= 21) return "Beer"; 
+                //         if (age >= 18) return "No beer";
+                //     }
+
+                   
+                //     if (age >= 18) return "Beer";
+                //     else return "No beer";
+                // }
+
+
+                // console.log( buyBeer(16) );
+                // console.log( buyBeer(18) );
+            </script>
+            <script>
+                // function doSomething(condition) {
+                //     if (condition)
+                //     console.log("Condition satisfied");
+                //     console.log("Doing something anyways");
+
+                //     if (condition)
+                //     console.log("Condition satisfied");
+                //     console.log("Doing something anyways");
+
+                    // if (condition) console.log("Condition satisfied");
+                    // console.log("Doing something anyways");
+            
+                // }
+
+                // doSomething(true);
+                // doSomething(false);
+
+
+            </script>
+            <script>
+
+            //    const points = 69;
+            //    let rating = "";
+
+            //     if (points >= 90) {
+            //         rating = "Excelent";
+
+            //     } else if (points >= 70) {
+            //         rating = "Well done!";
+
+            //     } else if (points >= 50) {
+            //         rating = "Passed";
+
+            //     } else {
+            //         rating = "Failed...";
+
+            //     }
+
+            //     console.log(`Achieved ${points} points. ${rating}`);
+
+            // or 
+
+            // if (score >= 90) return "Excelent";
+            // else if (score >= 70) return "Well done";
+            // else if (score >= 50) return "Passed";
+            // else return "Failed...";
+
+            // or 
+
+            // if (score >= 90) return "Excelent";
+            // if (score >= 70) return "Well done";
+            // if (score >= 50) return "Passed";
+            // return "Failed...";
+
+
+
+
+            </script>
+            <script>
+
+            //     function rateStudents(score) {
+            //         let rating = "";
+                
+            //     if (points >= 90) {
+            //         rating = "Excelent";
+            //     } else if (points >= 70) {
+            //         rating = "Well done!";
+            //      } else if (points >= 50) {
+            //         rating = "Passed";
+            //     } else {
+            //         rating = "Failed...";
+            //     }
+            //     return rating;
+            // }
+
+            // console.log(rating);
+
+            // const studentPoints = 99;
+            // const studentRating = rateStudent(studentPoints);
+
+            // console.log(`Achieved ${studentPoints} points.${studentRating}`)
+          </script>
+
+          <script>
+
+            //    function rateStudents(score) {
+            //       if (points >= 90) {
+            //         return "Excelent";
+            //     } else if (points >= 70) {
+            //         return "Well done!";
+            //      } else if (points >= 50) {
+            //         return "Passed";
+            //     } else {
+            //         return "Failed...";
+            //     }
+            // }
+
+            // console.log(rating);
+
+            // const studentPoints = 99;
+            // const studentRating = rateStudent(studentPoints);
+
+            // console.log(`Achieved ${studentPoints} points.${studentRating}`);
+          </script>
+
+
+          <script>
+
+          </script>
+</body>
+</html>
